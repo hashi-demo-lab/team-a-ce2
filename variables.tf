@@ -29,9 +29,9 @@ variable "aws_key_pair_key_name" {
   type        = string
 }
 
-variable "public_subnet_id" {
-  description = "Subnet ID where the EC2 instance will reside."
-  type        = string
+variable "public_subnet_ids" {
+  description = "List of public subnet IDs for the EC2 instance."
+  type        = list(string)
 }
 
 variable "security_group_http_id" {
@@ -67,7 +67,7 @@ variable "environment" {
   default     = "dev"
 }
 
-variable "TFE_TOKEN" {
-  description = "Terraform Cloud API TOKEN"
+variable "deployment_id" {
+  description = "Deployment ID"
   type = string
 }
