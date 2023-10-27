@@ -66,3 +66,8 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+variable "TFE_TOKEN" {
+  description = "Terraform Cloud API TOKEN"
+  type = string
+}
