@@ -7,13 +7,13 @@ variable "region" {
 variable "hcp_client_id" {
   description = "HCP client id"
   type        = string
-  default     = ""  # or remove the default if you want it to be mandatory
+  default     = "" # or remove the default if you want it to be mandatory
 }
 
 variable "hcp_client_secret" {
   description = "HCP client secret"
   type        = string
-  default     = ""  # or remove the default if you want it to be mandatory
+  default     = "" # or remove the default if you want it to be mandatory
   sensitive   = true
 }
 
