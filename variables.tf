@@ -5,16 +5,18 @@ variable "region" {
 }
 
 variable "hcp_client_id" {
-  description = "The client ID used to authenticate with HashiCorp Cloud Platform."
+  description = "HCP client id"
   type        = string
-  sensitive   = true # This will ensure Terraform doesn't print this in logs
+  default     = ""  # or remove the default if you want it to be mandatory
 }
 
 variable "hcp_client_secret" {
-  description = "The client secret used to authenticate with HashiCorp Cloud Platform."
+  description = "HCP client secret"
   type        = string
-  sensitive   = true # This will ensure Terraform doesn't print this in logs
+  default     = ""  # or remove the default if you want it to be mandatory
+  sensitive   = true
 }
+
 
 variable "instance_type" {
   description = "AWS EC2 instance type."

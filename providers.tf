@@ -1,12 +1,19 @@
 terraform {
+  cloud {
+    organization = "hashi-demos-apj"
+
+    workspaces {
+      name = "team-a-ec2"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.4.0"
+      version = "5.22.0"
     }
     hcp = {
       source  = "hashicorp/hcp"
-      version = "~> 0.61.0"
+      version = "0.75.0"
     }
   }
 }
