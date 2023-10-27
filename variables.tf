@@ -52,6 +52,7 @@ variable "ssm_instance_profile_name" {
 variable "owner" {
   description = "Owner of the EC2 resources."
   type        = string
+  default     = "aarone"
 }
 
 variable "ttl" {
@@ -63,4 +64,5 @@ variable "ttl" {
 variable "environment" {
   description = "Environment where EC2 will be deployed (e.g., prod, dev, staging)."
   type        = string
+  default     = "dev"
 }
