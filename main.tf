@@ -5,7 +5,7 @@ data "tfe_outputs" "foo" {
 
 module "ec2_instance" {
   source  = "app.terraform.io/hashi-demos-apj/ec2/aws"
-  version = "0.0.6"
+  version = "0.0.7"
 
   deployment_id             = nonsensitive(data.tfe_outputs.foo.values.deployment_id)
   instance_type             = var.instance_type
